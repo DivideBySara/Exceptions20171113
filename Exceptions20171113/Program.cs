@@ -39,6 +39,21 @@ namespace Exceptions20171113
                     + ex.Message);
             }
 
+            int x = 6;
+            int y = 2;
+
+            try
+            {
+                int z = 0;
+                int a = x / y;
+                int b = x / z; // exception
+                WriteLine($"a = {a}. b = {b}");
+            }
+            catch (DivideByZeroException)
+            {
+                WriteLine("At least one divisor = 0. No can do.");
+            }
+
             ReadKey();
         } // End Main()
 
